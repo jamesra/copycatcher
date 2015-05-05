@@ -1,0 +1,246 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Welcome to CopyCatcher’s Documentation &mdash; CopyCatcher 1.0 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="CopyCatcher 1.0 documentation" href="#"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="#" class="icon icon-home"> CopyCatcher
+        
+
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="simple">
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="#">CopyCatcher</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="#">Docs</a> &raquo;</li>
+      
+    <li>Welcome to CopyCatcher&#8217;s Documentation</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/index.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="welcome-to-copycatcher-s-documentation">
+<h1>Welcome to CopyCatcher&#8217;s Documentation<a class="headerlink" href="#welcome-to-copycatcher-s-documentation" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul class="simple">
+</ul>
+</div>
+<div class="section" id="about">
+<h2>About<a class="headerlink" href="#about" title="Permalink to this headline">¶</a></h2>
+<p>Copy Catcher was created to find suspiciously similiar blocks of text in student assignments.</p>
+</div>
+<div class="section" id="why-copy-catcher">
+<h2>Why Copy catcher<a class="headerlink" href="#why-copy-catcher" title="Permalink to this headline">¶</a></h2>
+<p>There are a number of programs on the internet to detect plagarism.  However
+most are concerned about internet sources.  Copy Catcher focuses on cheating
+within the class.  CopyCatcher was originally written to find duplicated portions of
+patient care plans in a medical education course.</p>
+</div>
+<div class="section" id="how-it-works">
+<h2>How it works<a class="headerlink" href="#how-it-works" title="Permalink to this headline">¶</a></h2>
+<p>Each Word or PDF file in a chosen directory is converted to a text file.  For every word in the text file we build a set from the nearest N adjacent words.
+This set of words is sorted to create a dictionary key.  We then create or append a list with the filename for that dictionary key.  After all files are
+processed we check for keys present in multiple files and present a report suggesting which files warrant investigation.</p>
+</div>
+<div class="section" id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<p>First make sure you have a <a class="reference external" href="http://git-scm.com/download">git client</a> installed.
+CopyCatcher is a Python program, so ensure you have <a class="reference external" href="http://python.org">Python</a> installed as well.</p>
+<p>Once python is installed go to a command console.  Go to the python scripts directory and install copycatcher with Pip.
+Better directions can be found on Google if these are overly brief.:</p>
+<div class="highlight-python"><div class="highlight"><pre>pip install git+https://jamesra.github.io/copycatcher#master
+</pre></div>
+</div>
+</div>
+<div class="section" id="use">
+<h2>Use<a class="headerlink" href="#use" title="Permalink to this headline">¶</a></h2>
+<p>A good start is to ensure each file is named after the student so the results can be easily interpreted.</p>
+<p>Some assignments have duplicate text included.  For example questions shared across all assignments.  Specify the name of a file in the folder which contains text which should be excluded from the duplicate results.</p>
+<pre class="literal-block">
+usage: copycatcher [-h] [-blocksize BLOCKSIZE] [-template TEMPLATE]
+                   folder_path
+</pre>
+<dl class="docutils">
+<dt>Positional arguments:</dt>
+<dd><table class="first last docutils option-list" frame="void" rules="none">
+<col class="option" />
+<col class="description" />
+<tbody valign="top">
+<tr><td class="option-group">
+<kbd>folder_path</kbd></td>
+<td>Folder to check for duplicate strings</td></tr>
+</tbody>
+</table>
+</dd>
+<dt>Options:</dt>
+<dd><table class="first last docutils option-list" frame="void" rules="none">
+<col class="option" />
+<col class="description" />
+<tbody valign="top">
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">-blocksize=6</span>, <span class="option">-s=6</span></kbd></td>
+</tr>
+<tr><td>&nbsp;</td><td>Number of adjacent words in a text block</td></tr>
+<tr><td class="option-group">
+<kbd><span class="option">-template</span>, <span class="option">-t</span></kbd></td>
+<td>Filename of assignment template</td></tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</div>
+<div class="section" id="example">
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
+<p>Find all of the duplicates in the C:Docs directory using a blocksize of 7 and excluding blocks found in a questions.doc file</p>
+<div class="highlight-python"><div class="highlight"><pre>copycatcher C:\Docs -blocksize 6 -template questions.doc
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, James Anderson.
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
