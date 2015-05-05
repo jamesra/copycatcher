@@ -36,7 +36,7 @@ CopyCatcher is a Python program, so ensure you have `Python`_ installed as well.
 Once python is installed go to a command console.  Go to the python scripts directory and install copycatcher with Pip. 
 Better directions can be found on Google if these are overly brief.::
 
-   pip install git+https://jamesra.github.io/copycatcher#master
+   pip install pip install git+https://github.com/jamesra/copycatcher#master
    
 Use
 ---

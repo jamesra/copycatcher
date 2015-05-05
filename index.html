@@ -136,7 +136,7 @@ processed we check for keys present in multiple files and present a report sugge
 CopyCatcher is a Python program, so ensure you have <a class="reference external" href="http://python.org">Python</a> installed as well.</p>
 <p>Once python is installed go to a command console.  Go to the python scripts directory and install copycatcher with Pip.
 Better directions can be found on Google if these are overly brief.:</p>
-<div class="highlight-python"><div class="highlight"><pre>pip install git+https://jamesra.github.io/copycatcher#master
+<div class="highlight-python"><div class="highlight"><pre>pip install pip install git+https://github.com/jamesra/copycatcher#master
 </pre></div>
 </div>
 </div>
@@ -168,10 +168,10 @@ usage: copycatcher [-h] [-blocksize BLOCKSIZE] [-template TEMPLATE]
 <tr><td class="option-group" colspan="2">
 <kbd><span class="option">-blocksize=6</span>, <span class="option">-s=6</span></kbd></td>
 </tr>
-<tr><td>&nbsp;</td><td>Number of adjacent words in a text block</td></tr>
+<tr><td>&nbsp;</td><td>Number of adjacent words in a text block.  Larger values may result in false negatives but decrease the number of results to check.</td></tr>
 <tr><td class="option-group">
 <kbd><span class="option">-template</span>, <span class="option">-t</span></kbd></td>
-<td>Filename of assignment template</td></tr>
+<td>Filename of assignment template.</td></tr>
 </tbody>
 </table>
 </dd>
