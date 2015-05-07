@@ -7,7 +7,6 @@ Created on Aug 30, 2013
 import glob
 import os
 
-from setuptools import setup, find_packages
 
 from ez_setup import use_setuptools
 
@@ -16,12 +15,17 @@ from ez_setup import use_setuptools
 if __name__ == '__main__':
 
     use_setuptools()
-
+    
+    from setuptools import setup, find_packages
+    
+    packages = find_packages()
+    
     install_requires = ["pdf2text"]
 
-    packages = find_packages()
-
     provides = ["copy_catcher"]
+    
+    classifiers = ['Programming Language :: Python :: 3.4',
+                   'Programming Language :: Python :: 2.7']
 
     dependency_links = ["git+http://github.com/jamesra/copycatcher#egg=copy_catcher-1.0.0"]
 
@@ -35,10 +39,11 @@ if __name__ == '__main__':
           zip_safe=True,
           version='1.0.0',
           scripts=scripts,
+          classifiers=classifiers,
           description="Find matching text blocks in files",
           author="James Anderson",
           author_email="James.R.Anderson@utah.edu",
-          url="https://jamesra.github.com/copy_catcher",
+          url="http://jamesra.github.com/copy_catcher",
           packages=packages,
           entry_points=entry_points,
           install_requires=install_requires,
