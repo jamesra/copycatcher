@@ -23,7 +23,7 @@ if __name__ == '__main__':
 
     provides = ["copy_catcher"]
 
-    dependency_links = ["git+https://github.com/nornir/nornir-pools#egg=copy_catcher-1.0.0"]
+    dependency_links = ["git+https://github.com/jamesra/copycatcher#egg=copy_catcher-1.0.0"]
 
     package_dir = {'copy_catcher' : 'copy_catcher'}
 
