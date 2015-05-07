@@ -23,14 +23,14 @@ if __name__ == '__main__':
 
     provides = ["copy_catcher"]
 
-    dependency_links = []
+    dependency_links = ["git+https://github.com/nornir/nornir-pools#egg=copy_catcher-1.0.0"]
 
     package_dir = {'copy_catcher' : 'copy_catcher'}
 
     scripts = glob.glob(os.path.join('scripts', 'main.py'))
 
     entry_points = {'console_scripts': ['copycatcher = copy_catcher.main:Execute']}
-
+    
     setup(name='copy_catcher',
           zip_safe=True,
           version='1.0.0',
