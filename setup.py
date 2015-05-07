@@ -23,7 +23,7 @@ if __name__ == '__main__':
 
     provides = ["copy_catcher"]
 
-    dependency_links = ["git+https://github.com/jamesra/copycatcher#egg=copy_catcher-1.0.0"]
+    dependency_links = ["git+http://github.com/jamesra/copycatcher#egg=copy_catcher-1.0.0"]
 
     package_dir = {'copy_catcher' : 'copy_catcher'}
 
@@ -35,7 +35,7 @@ if __name__ == '__main__':
           zip_safe=True,
           version='1.0.0',
           scripts=scripts,
-          description="Find similiar text in files",
+          description="Find matching text blocks in files",
           author="James Anderson",
           author_email="James.R.Anderson@utah.edu",
           url="https://jamesra.github.com/copy_catcher",
