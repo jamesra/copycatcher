@@ -34,7 +34,7 @@ def CreateParser():
                         action='store',
                         default=None, 
                         type=str,
-                        help='Filename of assignment template.',
+                        help='Filename of assignment template.  Words in the template are never considered duplicates.',
                         dest='template') 
     return parser
 
